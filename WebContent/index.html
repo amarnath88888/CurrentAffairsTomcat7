@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="utf-8" />
+<title>Current Affairs</title>
+
+</head>
+ 
+<body id="index" class="home">
+
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:150px;
+    float:left;
+    padding:5px;	      
+}
+#section {   
+    float:left;
+    padding:10px;	 	 
+}
+</style>
+</head>
+<body>
+
+<div id="header">
+<h1>Current Affairs</h1>
+</div>
+
+<div id="nav">
+Load Current Affairs<br>
+View Current Affairs<br>
+</div>
+
+<div id="section">
+<form action="affairs" method="post">
+<button type="button" onclick="alert('You are about to add form items!!!!!')">Add Fields</button>
+<br>
+<br>
+ <!-- Date:<input type="text" name="date">
+ <span style="padding-left:68px;"></span> -->
+  Speaker / Author:
+  <input type="text" name="author">
+  <span style="padding-left:68px;"></span>
+  <br>
+  News Description:
+  <input type="text" name="news_desc">
+  <span style="padding-left:68px;"></span>
+  <br>
+  <input type="submit" name="add news">
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Current Affairs to JSON</title>
+	<style>
+	body{
+		font-family:tahoma;
+		font-size:12px;
+	}
+	input[type=text], input[type=submit]{
+		border-radius: 4px;
+		border:1px #333 solid;
+		margin:4px 0;
+		padding:0.3em;
+	}
+	textarea{
+		border-radius: 4px;
+		border:1px #ccc solid;
+		margin:4px 0;
+		padding:0.3em;
+		max-height: 100px;
+		min-height: 100px;
+		height:100px;
+		max-width: 600px;
+		min-width: 200px;
+		width: 400px;
+	}
+	input[type=submit]{
+		width: 100%;
+		display: block;
+	}
+	fieldset{
+		border:1px #111 solid;
+		border-radius: 4px;
+	}
+	</style>
+</head>
+<body>
+
+<div id="json_result"></div>
+<br />
+<form name="f1" method="post" onsubmit="return formToJson(this);">
+	<fieldset>
+		<legend>Message Description</legend>
+		<textarea name="message_desc" placeholder="Message Description">Message Description</textarea>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Author</legend>
+		<input type="text" name="author" placeholder="Author" value="Author" /><br />
+	</fieldset>
+
+	<fieldset>
+		<legend>Designation</legend>
+		Choose Designation:
+		<input type="text" list="designation" name="Designation" />
+		<datalist id="designation">
+		  <option value="Central Minister">
+		  <option value="Chief Minister(CM)">
+		  <option value="Prime Minister(PM)">
+		  <option value="President">
+		  <option value="Governor">
+		  <option value="Minister">
+		</datalist>
+	</fieldset>
+
+	<fieldset>
+		<legend>Government Type</legend>
+		Government Type
+		<input type="radio" name="gvt_type" value="C" />Central
+		<input type="radio" name="gvt_type" value="S" />State
+		<input type="radio" name="gvt_type" value="O" />Others
+	</fieldset>
+
+	<fieldset>
+		<legend>Government</legend>
+		<input type="text" name="government" value="Government" placeholder="Government">
+	</fieldset>
+
+	<fieldset>
+		<legend>Authority</legend>
+		<input type="text" name="authority" value="Authority" placeholder="Authority">
+	</fieldset>
+
+	<fieldset>
+		<legend>File</legend>
+		<input type="file" name="file" />
+	</fieldset>
+
+	<input type="submit" name="submit" />
+	<input type="reset" name="reset" />
+
+</form>
+
+
+
+
+<script src="form-to-json.js"></script>
+
+
+</body>
+</html>
